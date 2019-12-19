@@ -3,8 +3,11 @@ const puff = () => {
 	const label = document.getElementsByTagName('label')[0];
 	const images = document.getElementsByTagName('main')[0].getElementsByTagName('img');
 	const watch = document.getElementById('watch');
+	const container = document.getElementById('container');
 
 	watch.addEventListener('click', ()=>{
+
+		container.style.display = 'grid';
 
 		Array.from (images).forEach( (images, i) =>{
 				setTimeout( ()=>{
