@@ -10,6 +10,7 @@ const puff = () => {
 		container.style.display = 'grid';
 
 		Array.from (images).forEach( (images, i) =>{
+			
 				setTimeout( ()=>{
 
 						images.style.opacity='1';

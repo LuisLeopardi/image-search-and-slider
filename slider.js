@@ -29,41 +29,41 @@ const slider =  () => {
 	wrap.children[ 0 ].classList.add("circle-focus");
 
 
-		next.addEventListener ('click', () => {
+	next.addEventListener ('click', () => {
 
-			const limit = slider.children.length  * 100 - 100;
+		const limit = slider.children.length  * 100 - 100;
 
-			if (counter !== limit) {
+		if (counter !== limit) {
 
-				counter += 100;
+			counter += 100;
 
-				wrap.children[ counter / 100 ].classList.add("circle-focus");
+			wrap.children[ counter / 100 ].classList.add("circle-focus");
 
-				wrap.children[ counter / 100 - 1 ].classList.remove("circle-focus");
+			wrap.children[ counter / 100 - 1 ].classList.remove("circle-focus");
 
-			} else {
+		} else {
 		
-				counter = 0;
+			counter = 0;
 
-				wrap.children[ counter / 100 ].classList.add("circle-focus");
+			wrap.children[ counter / 100 ].classList.add("circle-focus");
 
-				wrap.children[ limit / 100 ].classList.remove("circle-focus");
+			wrap.children[ limit / 100 ].classList.remove("circle-focus");
 
-			};
+		};
 
-			if (counter == 0) {
+		if (counter == 0) {
 
-				prev.style.display = 'none'
+			prev.style.display = 'none'
 
-			} else {
+		} else {
 
-				prev.style.display = 'block'
+			prev.style.display = 'block'
 
-			};
+		};
 
-			let move = counter + 'vw';
+		let move = counter + 'vw';
 
-			slider.style.transform = 'translateX(-' + move  + ')';
+		slider.style.transform = 'translateX(-' + move  + ')';
 
 
 		} );
@@ -94,17 +94,6 @@ const slider =  () => {
 		} );
 
 }
-
-
-
-const search = () => {
-
-	
-	
-}
-
-
-
 
 slider ();
 
